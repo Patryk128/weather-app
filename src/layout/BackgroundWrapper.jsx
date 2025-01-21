@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./BackgroundWrapper.css";
+import "../Styles/BackgroundWrapper.css";
 
 const BackgroundWrapper = ({ weatherDescription, children }) => {
   const getBackgroundStyle = () => {

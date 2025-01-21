@@ -10,65 +10,66 @@
 }
 
 .background-wrapper.default {
-  background: linear-gradient(to bottom, #87cefa, #ffffff);
+  background: linear-gradient(to bottom, #4682b4, #a9a9a9);
 }
 
 .background-wrapper.rainy {
-  background-image: url("/images/rainy.jpg");
+  background-image: url("../assets/images/rainy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.cloudy {
-  background-image: url("/images/cloudy.jpg");
+  background-image: url("../assets/images/cloudy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.sunny {
-  background-image: url("/images/sunny.jpg");
+  background-image: url("../assets/images/sunny.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.snowy {
-  background-image: url("/images/snowy.jpg");
+  background-image: url("../assets/images/snowy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.stormy {
-  background-image: url("/images/stormy.jpg");
+  background-image: url("../assets/images/stormy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.drizzly {
-  background-image: url("/images/drizzly.jpg");
+  background-image: url("../assets/images/drizzly.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.misty {
-  background-image: url("/images/misty.jpg");
+  background-image: url("../assets/images/misty.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.dusty {
-  background-image: url("/images/dusty.jpg");
+  background-image: url("../assets/images/dusty.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.windy {
-  background-image: url("/images/windy.jpg");
+  background-image: url("../assets/images/windy.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .background-wrapper.tornado {
   background-image: url("/images/tornado.jpg");
+  background-image: url("../assets/images/tornado.jpg");
   background-size: cover;
   background-position: center;
 }

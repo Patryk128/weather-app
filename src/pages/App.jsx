@@ -1,11 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import WeatherIcon from "./WeatherIcon.jsx";
-import BackgroundWrapper from "./BackgroundWrapper.jsx";
-import Modal from "./Modal.jsx";
-import "./App.css";
+import { faSearch, faWater } from "@fortawesome/free-solid-svg-icons";
+import WeatherIcon from "../components/WeatherIcon.jsx";
+import BackgroundWrapper from "../layout/BackgroundWrapper.jsx";
+import Modal from "../components/Modal.jsx";
+import "../Styles/App.css";
 
 const App = () => {
   const [city, setCity] = useState("");
@@ -163,15 +163,23 @@ const App = () => {
           {error && <p className="error">{error}</p>}
           {weather && (
             <div className="weather-info">
-              <p className="humidity">Humidity: {weather.main.humidity}%</p>
-              <div className="weather-info-description">
-                <p className="condition">
-                  Condition: {weather.weather[0].description}
+              <div className="humidity-info">
+                <FontAwesomeIcon icon={faWater} className="humidity-icon" />
+                <p className="humidity">
+                  {weather.main.humidity}% <span>Humidity</span>
                 </p>
+              </div>
+              {/* <p className="humidity">Humidity: {weather.main.humidity}%</p> */}
+              <div className="weather-info-description">
                 <WeatherIcon
                   iconCode={weather.weather[0].icon}
                   colored={true}
                 />
+                <p className="condition">
+                  {weather.weather[0].description.charAt(0).toUpperCase() +
+                    weather.weather[0].description.slice(1)}
+                  <span>Condition</span>
+                </p>
               </div>
             </div>
           )}

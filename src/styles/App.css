@@ -1,4 +1,7 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header.no-city {
@@ -13,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
   gap: 10px;
 
   background: rgba(255, 255, 255, 0.6);
@@ -122,6 +125,8 @@ h1 {
 }
 
 .weather-info {
+  display: flex;
+  gap: 30px;
   text-align: left;
   font-size: 1.2rem;
 }
@@ -134,6 +139,8 @@ h1 {
 
 .humidity,
 .condition {
+  display: flex;
+  flex-direction: column;
   margin: 5px 0;
 }
 .temperature {
@@ -167,11 +174,43 @@ h1 {
   margin: 5px 0;
 }
 
+.humidity-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.humidity-icon {
+  /* color: #007bff; */
+  font-size: 1.5rem;
+}
+
+.city-header {
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.city-header:hover {
+  color: #007bff;
+}
+
 @media (max-width: 600px) {
-  .App-header {
-    padding: 15px;
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
   }
 
+  .App-header.no-city {
+    padding: 15px;
+    min-height: 20vh;
+  }
+  .App-header.city-entered {
+    padding: 0;
+  }
   .city-input {
     padding: 8px;
   }
@@ -187,14 +226,11 @@ h1 {
   h1 {
     font-size: 2rem;
   }
-}
+  .forecast {
+    width: 100%;
+  }
 
-.city-header {
-  cursor: pointer;
-  color: #333;
-  transition: color 0.3s;
-}
-
-.city-header:hover {
-  color: #007bff;
+  .forecast p {
+    font-size: 0.75rem;
+  }
 }
