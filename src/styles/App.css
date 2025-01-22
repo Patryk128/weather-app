@@ -3,57 +3,37 @@
   justify-content: center;
   align-items: center;
 }
-
-.App-header.no-city {
-  color: #333;
-
+.App-header {
   max-width: 800px;
   width: 100%;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  gap: 10px;
-
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   transition: all 0.3s ease;
-
-  h1 {
-    margin-bottom: 20px;
-  }
+}
+.App-header.no-city {
+  min-height: 30vh;
+  padding: 50px;
+  gap: 10px;
 }
 
 .App-header.city-entered {
-  max-width: 800px;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  text-align: center;
   min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
   gap: 20px;
-
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.5px);
-  -webkit-backdrop-filter: blur(9.5px);
-  transition: all 0.3s ease;
 }
 
-h1 {
-  margin-bottom: 10px;
+.city-header {
+  margin-bottom: 20px;
   color: #333;
   font-size: 2.5rem;
 
@@ -143,9 +123,11 @@ h1 {
   flex-direction: column;
   margin: 5px 0;
 }
+
 .temperature {
   font-size: 1.2rem;
 }
+
 .forecast {
   text-align: center;
 }
@@ -154,7 +136,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  overflow-x: auto;
 }
 
 .forecast-day {
@@ -182,7 +163,6 @@ h1 {
 }
 
 .humidity-icon {
-  /* color: #007bff; */
   font-size: 1.5rem;
 }
 
@@ -198,9 +178,6 @@ h1 {
 
 @media (max-width: 600px) {
   .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 90%;
   }
 
@@ -208,29 +185,30 @@ h1 {
     padding: 15px;
     min-height: 20vh;
   }
+
   .App-header.city-entered {
-    padding: 0;
-  }
-  .city-input {
-    padding: 8px;
+    padding-top: 20px;
   }
 
-  .search-button {
-    padding: 8px 12px;
-  }
-
-  .suggestions li {
-    font-size: 14px;
-  }
-
-  h1 {
+  .city-header {
     font-size: 2rem;
   }
-  .forecast {
-    width: 100%;
+
+  .forecast-container {
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
   }
 
-  .forecast p {
-    font-size: 0.75rem;
+  .forecast-day {
+    flex: 0 1 calc(33.33% - 10px);
+    max-width: 150px;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .forecast-day p {
+    font-size: 0.8rem;
+    margin: 3px 0;
   }
 }

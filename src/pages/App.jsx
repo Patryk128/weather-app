@@ -122,7 +122,10 @@ const App = () => {
         <header
           className={`App-header ${weather ? "city-entered" : "no-city"}`}
         >
-          <h1 onClick={() => weather && setIsInputVisible((prev) => !prev)}>
+          <h1
+            className="city-header"
+            onClick={() => weather && setIsInputVisible((prev) => !prev)}
+          >
             {weather ? (
               <span>
                 {weather.name}, {weather.sys.country}{" "}
@@ -132,6 +135,7 @@ const App = () => {
               "Weather App"
             )}
           </h1>
+
           {(isInputVisible || !weather) && (
             <div
               className={`input-container ${
